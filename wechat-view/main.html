@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="wechat-view.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+</head>
+<body>
+    <div id="left-panel">
+        <div class="center-box" style="width: 100%;margin-top: 2rem">
+            <img src="./images/search-box.png" width="81%"/>
+        </div>
+        <div id="history-message-list-box">
+            <dl id="history-message-list">
+                <dt>
+                    <div class="history-message-list-item">
+                        <img src="./images/test-head-img.jpg" alt="" width="12%">
+                        <div style="display: flex;flex-direction: column;justify-content: space-between;flex: 3;margin-left: 0.5rem;">
+                            <div id="history-message-list-item-title">你好</div>
+                            <div id="history-message-list-item-subtitle">哈哈</div>
+                        </div>
+                        <div id="time" style="flex: 1;">
+                            昨天
+                        </div>
+                    </div>
+                </dt>
+            </dl>
+        </div>
+        
+    </div>
+    <div id="right-panel">
+        <div style="display: flex; flex-direction: row; width: 100%; justify-content: space-between;align-items:flex-end;">
+            <div id="name">
+                小明
+            </div>
+            
+            <div class="center-box" style="width: 25%;">
+                <img src="./images/right-top-buttons.png" width="100%"/>
+            </div>
+        </div>
+        <div style="height: 2px; width: 100%; background-color: #e7e7e7;"></div>
+        <div id="current-messages-box" style="width: 100%; height: 100%;overflow-y: scroll;">
+            <dl id="current-messages">
+                <dt>
+                    <div class="message-me">
+                        <div class="message-me-text">
+                            测试数据
+                        </div>
+                        <div class="message-me-img">
+                            <img src="./images/test-head-img.jpg" alt="" width="36rem" height="36rem"/>
+                        </div>
+                    </div>
+                    <div class="message-other">
+                        <div class="message-other-img">
+                            <img src="./images/test-head-img.jpg" alt="" width="36rem" height="36rem"/>
+                        </div>
+                        <div class="message-other-text">
+                            测试数据2
+                        </div>
+                    </div>
+                    <div class="time-divider">
+                        2020年10月30日
+                    </div>
+                </dt>
+            </dl>
+        </div>
+        <div style="background-color: white; display: flex;flex-direction: column;width: 100%;height: 40%;justify-content: stretch;">
+            <div style="width: 100%;">
+                <img src="./images/function-buttons.png" alt="" width="20%" >
+            </div>
+            <input id="input-text" type="text" autofocus/>
+            <button id="button-send" type="submit">发送</button>
+        </div>
+    </div>
+    <script src="./utils.js"></script>
+    <script src="./wechat-view.js"></script>
+</body>
+</html>

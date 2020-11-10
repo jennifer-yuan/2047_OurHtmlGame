@@ -1,0 +1,40 @@
+.fade-in-text{
+    opacity: 0;
+    animation: anim-fade-in-text 2s ease;
+    animation-fill-mode: forwards; 
+}
+.fade-out-text{
+    animation: anim-fade-out-text 2s ease;
+    animation-fill-mode: forwards;
+}
+.fade-in-and-out-text{
+    animation: anim-fade-in-and-out-text 2s ease-in-out;
+    animation-fill-mode: forwards;
+}
+.hover-highlight{
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    transition: width 200ms,height 200ms,box-shadow 200ms;
+}
+.hover-highlight:hover{
+    width: 120px;
+    height: 120px;
+    box-shadow: 4px 4px 8px 2px gray;
+}
+
+@keyframes anim-fade-in-text{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes anim-fade-out-text{
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+@keyframes anim-fade-in-and-out-text{
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
+}
