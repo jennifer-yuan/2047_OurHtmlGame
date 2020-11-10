@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    const jsonData = {
+    const jsonData = { //修改对话请在这里完成
         //我们的头像的位置
         "head-img":"./images/test-head-img.jpg",
         //左侧的对话列表
@@ -16,7 +16,7 @@ $(document).ready(function(){
                         //谁发的消息 0-我，1-对方
                         "who":0,
                         "msg":"我想你了",
-                        //时间 目前支持 字符串形式的now:现在 和 数字形式的时间
+                        //时间 目前支持 字符串形式的now:现在 和 数字形式的时间（此时间是从1970/1/1到现在的毫秒数）
                         "time":"now"
                     },
                     {
