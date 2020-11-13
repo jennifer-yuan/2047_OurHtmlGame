@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>整体框架例子</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="./js/framework.js"></script>
+</head>
+<body>
+    <div style="display: flex;flex-direction: column;width: fit-content;height: fit-content;">
+        <div id="name">
+            这是说话的人
+        </div>
+        <div id="text">
+            这是测试的文本
+        </div>
+        <div><img src="./images/test-head-img.jpg" alt="" id="image" style="width: 100px;height: 100px;"></div>
+        <div style="display: flex;justify-content: center;flex-direction: row;">
+            <button id="button-forward">
+                上一个
+            </button>
+            <button id="button-next">
+                下一个
+            </button>
+        </div>
+    </div>
+</body>
+</html>

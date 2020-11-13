@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+</head>
+<body>
+    <h3>这是第二页</h3>
+    <button id="back">
+        点击回退到刚刚那一页
+    </button>
+</body>
+<script>
+    $(document).ready(function(){
+        $("#back").click(function(){
+            goBackAndNext();
+        })
+
+        function goBackAndNext(){//返回到原来的页面并且进入下一场景
+            window.history.back(-1);
+            localStorage.currentIndex = Number(localStorage.currentIndex)+1;
+        }
+    })
+</script>
+</html>

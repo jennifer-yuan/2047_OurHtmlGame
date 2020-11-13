@@ -7,7 +7,7 @@ $(document).ready(function(){
             //数组，每一个代表一个联系人
             {
                 //名字
-                "name":"李华",
+                "name":"帅气的李华",
                 //头像图片位置
                 "head_img":"./images/test-head-img-2.jpg",
                 //所有消息
@@ -322,6 +322,7 @@ $(document).ready(function(){
     contactMessages[0].setChecked(true);
     setContactMessages(contactMessages);
     setMessageList(currentContact.messageList);
+    $("#name").text(currentContact.name);
     $(document).on("click",".history-message-list-item",function(){
         let index = $(this).parent().index();
         currentContact = contactMessages[index];

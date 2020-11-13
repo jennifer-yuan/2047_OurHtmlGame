@@ -1,0 +1,14 @@
+    .head{margin:0px auto;width:1400px;height:700px;background-color: teal;
+          position: relative;background-image:url(./imgs/pic123.jpg) ;border-style:inset;border-color: black ;}
+    .mos{margin:0px auto;width:1400px;height:220px;border-style:inherit;border-color: black;
+           background-color: tomato;position:absolute;top:480px;background-color: rgba(0,0,0,0.3);}
+    .butt2{width:300px;height:90px;background-color: wheat;position: absolute;top:120px;right:300px;border-radius: 50px;}
+    .letter{text-align: center;font-size: x-large;font-style: italic;color: ghostwhite;}
+    .letter2{font-size: x-large;font-style: italic;color: seashell;}
+    .pm button{color: rgba(255, 8, 0, 0.986);background-color: rgba(255, 173, 80, 0.233);border-radius: 0;
+               border: darkgoldenrod;position: absolute;top:120px;left:300px;width:300px;height:90px;border-radius: 30px;}
+    .lm button{color: rgba(255, 8, 0, 0.986);background-color: rgba(255, 173, 80, 0.233);border-radius: 0;
+               border: darkgoldenrod;position: absolute;top:120px;right:300px;width:300px;height:90px;border-radius: 30px;}
+      .pic1 {background-image: url(./imgs/透明女友.gif);
+            background-color: rgba(0, 0, 0, 0.575);width:600px;height:300px;margin:180px auto 0px;}      
+

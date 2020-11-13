@@ -11,6 +11,9 @@
     animation: anim-fade-in-and-out-text 2s ease-in-out;
     animation-fill-mode: forwards;
 }
+.up-and-fade-in-text{
+    animation: anim-up-and-fade-in-text 2s ease-in-out;
+}
 .hover-highlight{
     width: 100px;
     height: 100px;
@@ -37,4 +40,9 @@
     0%{opacity: 0;}
     50%{opacity: 1;}
     100%{opacity: 0;}
+}
+
+@keyframes anim-up-and-fade-in-text{
+    0%{opacity: 0;top: -200%;}
+    100%{opacity: 1;}
 }
