@@ -17,7 +17,7 @@ $(document).ready(function(){
                         "who":0,
                         "msg":"我想你了",
                         //时间 目前支持 字符串形式的now:现在 和 数字形式的时间（此时间是从1970/1/1到现在的毫秒数）
-                        "time":"now"
+                        "time":"2020年10月3日 3:45"
                     },
                     {
                         "who":1,
@@ -56,7 +56,39 @@ $(document).ready(function(){
                         "time":1604241989996
                     }
                 ]
+            },
+            {
+                //名字
+                "name":"急急急",
+                //头像图片位置
+                "head_img":"./images/test-head-img-2.jpg",
+                //所有消息
+                "messages":[
+                    {
+                        //谁发的消息 0-我，1-对方
+                        "who":0,
+                        "msg":"我想你了",
+                        //时间 目前支持 字符串形式的now:现在 和 数字形式的时间（此时间是从1970/1/1到现在的毫秒数）
+                        "time":"now"
+                    },
+                    {
+                        "who":1,
+                        "msg":"那你就想吧！",
+                        "time":"now"
+                    },
+                    {
+                        "who":1,
+                        "msg":"哈哈哈!",
+                        "time":"now"
+                    },
+                    {
+                        "who":0,
+                        "msg":"我干",
+                        "time":1212121212
+                    }
+                ]
             }
+        
         ]
     };
     const MESSAGE_ME = 0;
@@ -280,9 +312,14 @@ $(document).ready(function(){
             eachContact.messages.forEach(eachMessage=>{
                 let time;
                 if(isNaN(eachMessage.time)){
+                    if(eachMessage.time=="now"){
+                        time = NOW_TIME;
+                    }else{
+                        time = new Date(eachMessage.time.replace(/[年月]/g,"-").replace("日",""))
+                    }
                     switch(eachMessage.time){
                         case "now":
-                            time = NOW_TIME;
+                            
                             break;
                     }
                 }else{

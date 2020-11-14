@@ -1,12 +1,13 @@
 $(document).ready(function(){
     const configurationData = [
         {
-            "image":"./images/test-head-img.jpg",
+            "head-image":"./images/test-head-img.jpg",
+            "image":"./images/back-1.jpg",
             "text":"这是第一个文本",
             "name":"人名1"
         },
         {
-            "image":"./images/test-head-img-2.jpg",
+            "head-image":"./images/test-head-img-2.jpg",
             "text":"这是第二个文本，这个页面可以选择",
             "name":"name 2",
             "switch":[
@@ -21,21 +22,12 @@ $(document).ready(function(){
             ],
         },
         {
-            "image":"./images/test-head-img-3.jpg",
+            "head-image":"./images/test-head-img-3.jpg",
             "text":"这是第3个文本",
         },
         {
-            "image":"./images/test-head-img-2.jpg",
-            "text":"这是第3.5个文本",
-            "name":"人名3.5"
-        },
-        {
-            "image":"./images/test-head-img.jpg",
-            "text":"这是第3.6个文本",
-            "name":"人名3.6"
-        },
-        {
-            "image":"./images/test-head-img.jpg",
+            "image":"./images/back-1.jpg",
+            "head-image":"./images/test-head-img.jpg",
             "text":"这是第4个文本",
             "switch":[
                 {
@@ -51,7 +43,7 @@ $(document).ready(function(){
             ],
         },
         {
-            "image":"./images/test-head-img-2.jpg",
+            "head-image":"./images/test-head-img-2.jpg",
             "text":"这是第5个文本",
             "switch":[
                 {
@@ -78,6 +70,7 @@ $(document).ready(function(){
         localStorage.currentIndex = currentIndex;
     })
     const IMAGE_ID = "image";
+    const HEAD_IMAGE_ID = "head-image";
     const TEXT_ID = "text";
     const NAME_ID = "name";
     const FORWARD_BUTTON_ID = "button-forward";
@@ -90,6 +83,9 @@ $(document).ready(function(){
         let each_configuration = configurationData[index];
         if(each_configuration.image){//要是有设置图片属性
             $(`#${IMAGE_ID}`).attr("src",each_configuration.image);
+        }
+        if(each_configuration["head-image"]){//要是有设置图片属性
+            $(`#${HEAD_IMAGE_ID}`).attr("src",each_configuration["head-image"]);
         }
         if(each_configuration.text){
             $(`#${TEXT_ID}`).text(each_configuration.text);
